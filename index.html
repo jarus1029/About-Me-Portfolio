@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suraj</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: url(images/bg_2.jpg);
+            background-repeat: no-repeat;
+            background-size: 1537px 730px;
+            z-index: 1;
+        }
+
+        input {
+            width: 250px;
+            padding-top: 5px;
+        }
+
+        .item {
+            font-size: 20px;
+            list-style: none;
+            padding: 20px 30px;
+            /* color: white; */
+        }
+
+        .navbar ul {
+            margin: 0;
+            /* border: 2px solid rgb(38, 0, 255); */
+            padding-left: 0px;
+            padding-top: 10px;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            font-family: 'Poppins', sans-serif;
+            padding-right: 150px;
+            position: fixed;
+            width: 100%;
+            background-color: rgb(0, 0, 0, 0.38);
+        }
+
+        a {
+            opacity: 1;
+        }
+
+        /* .navbar {
+            position: fixed;
+            opacity: 1;
+            margin-left: 21%;
+        } */
+
+        .left {
+            display: inline-block;
+            position: absolute;
+            left: 50px;
+            top: 22px;
+            border: 2px solid red;
+
+        }
+
+        .navbar li a {
+            color: white;
+            font-weight: 600;
+            font-size: 22px;
+            text-decoration: none;
+            /* border: 2px solid green; */
+            /* background-color: red; */
+            border-radius: 5px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+
+        .navbar li a:hover {
+            color: #00ffffad;
+            
+            transition: all 0.9s ease-in-out;
+            /* background-color: #07242f; */
+
+        }
+
+        .mid {
+            text-align: center;
+            padding: 285px;
+            color: white;
+            height: 135px;
+        }
+
+        .first {
+            color: #000000e7;
+            color: white;
+            font-size: 50px;
+        }
+        
+        .second {
+            color: #000000f9;
+            color: white;
+            font-size: 100px;
+            font-weight: 600;
+            padding-left: 20px;
+            font-family: 'Lalezar';
+            word-spacing: 0.2cm;
+            letter-spacing: 0.1px;
+        }
+        .second:hover 
+        {
+            transform: scale(1.05);
+            transition: all 0.1s ease-in-out;
+        
+        }
+        .third {
+            color: #000000db;
+            color: white;
+            font-size: 20px;
+            padding-left: 10px;
+            font-weight: 600;
+            word-spacing: 0.15cm;
+        }
+
+        .resume {
+            background-color: #00121afb;
+            height: 2230px;
+        }
+
+        .desc {
+            text-align: center;
+            color: #00ffffad;
+            padding-top: 34px;
+            font-size: 25px;
+        }
+
+        #edu {
+            color: white;
+            margin-left: 335px;
+            margin-top: 70px;
+            font-size: 20px;
+            letter-spacing: 0.02cm;
+        }
+
+        #skills {
+            color: white;
+            margin-left: 302px;
+            margin-top: 70px;
+            font-size: 20px;
+            letter-spacing: 0.02cm;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .column {
+            flex: 50%;
+            /* border: 2px solid red; */
+            height: 625px;
+            width: 500px;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            background-color: #07242f;
+            border-radius: 7px;
+            margin-top: 22px;
+            height: 100px;
+            width: 500px;
+            color: white;
+            padding: 25px 25px 25px 25px;
+            margin-left: 147px;
+            flex: 50%;
+        }
+        .box:hover
+        {
+            transform: scale(1.05);
+            transition: all 0.1s ease-in-out;
+        }
+
+        #date {
+            margin-top: 10px;
+            height: 20px;
+            width: 140px;
+            font-size: 12px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+
+        #name {
+            height: 30px;
+            width: 530px;
+            font-size: 22px;
+            font-weight: 800;
+            color: #00ffffad;
+
+        }
+
+        #score {
+            font-size: 15px;
+            height: 20px;
+        }
+
+        .lang {
+            color: white;
+            font-size: 20px;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+        .box2 {
+            display: flex;
+            flex-direction: column;
+            background-color: #07242f;
+            border-radius: 7px;
+            margin-top: 22px;
+            height: 100px;
+            width: 500px;
+            color: white;
+            padding: 25px 25px 25px 25px;
+            margin-left: 60px;
+            flex: 50%;
+        }
+
+        .box2>p {
+            margin: 0px 0px;
+            color: #00ffffad;
+        }
+
+        .box2>ul {
+            margin-top: 10px;
+        }
+        .box2:hover
+        {
+            transform: scale(1.05);
+            transition: all 0.1s ease-in-out;
+        }
+
+        .pic {
+            height: 438px;
+            width: 456px;
+            margin: 50px 156px;
+            border-radius: 50%;
+            border: 4px solid #00deff99;
+        }
+        .pic:hover
+        {
+            transform: scale(1.03);
+            transition: all 0.9s ease-in-out;
+            /* border: 4px solid yellowgreen; */
+        }
+
+        .column>p {
+            /* font-family: 'Raleway', sans-serif; */
+            color: #00ffffad;
+            padding-top: 100px;
+            padding-right: 77px;
+            font-size: 27px;
+            letter-spacing: 00.02cm;
+            font-family: 'Karla', sans-serif;
+        }
+
+        .contact {
+            /* border: 2px solid red; */
+            height: 52px;
+            margin: 18px 62px;
+        }
+
+        .logos {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: 165px 176px 50px;
+            height: 66px;
+            width: 82px;
+            margin-top: 101px;
+        }
+
+        /* .logos:hover
+        {
+            filter: invert(100%);
+        } */
+        #tweet {
+            filter: invert(100%);
+        }
+
+        #linked {
+            filter: invert(100%);
+        }
+
+        .email {
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+            padding-left: 569px;
+            height: 50px;
+            padding-top: 20px;
+        }
+
+        .center {
+            text-align: center;
+            color: #00ffffad;
+            font-size: 20px;
+        }
+
+        .btn {
+            margin-left: 243px;
+            margin-bottom: 20px;
+            align-items: center;
+            height: 32px;
+            /* border: 2px solid red; */
+            background-color: #07242f;
+            border-radius: 6px;
+            font-size: 17px;
+            margin-top: 111px;
+        }
+
+        button>a {
+            color: white;
+        }
+
+        button>a:hover {
+            color: #00ffffad;
+            transform: scale(1.01);
+            transition: all 0.9s ease-in-out;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .forms {
+            color: #00ffffad;
+            text-align: center;
+            padding-top: 70px;
+            font-size: 23px;
+            letter-spacing: 00.02cm;
+        }
+
+        .forms2 {
+            color: #00ffffad;
+            text-align: center;
+            padding-top: 0px;
+            font-size: 23px;
+            letter-spacing: 00.02cm;
+        }
+
+        ::placeholder {
+            height: 25px;
+            width: 500px;
+
+        }
+
+        .feed {
+            display: flex;
+            flex-direction: column;
+            width: 514px;
+            height: 47px;
+            margin-left: 121px;
+            margin-top: 25px;
+            padding-left: 10px;
+            background-color: #07242f;
+            color: white;
+        }
+
+        .message {
+            display: flex;
+            flex-direction: column;
+            width: 514px;
+            height: 190px;
+            margin-left: 121px;
+            margin-top: 25px;
+            padding-left: 10px;
+            padding-top: 5px;
+            background-color: #07242f;
+            color: white;
+        }
+
+        .btn2 {
+            display: float;
+            flex-direction: row;
+            margin-left: 264px;
+            margin-bottom: 20px;
+            margin-top: 2px;
+            height: 32px;
+            /* border: 2px solid red; */
+            background-color: #07242f;
+            border-radius: 6px;
+            font-size: 17px;
+            color: white;
+            margin-left: 2px;
+            padding-top: 4px;
+        }
+
+        .btn2:hover {
+            color: #00ffffad;
+            transform: scale(1.01);
+            transition: all 0.9s ease-in-out;
+        }
+
+        .btn3 {
+            display: float;
+            flex-direction: row;
+            margin-left: 264px;
+            margin-bottom: 20px;
+            margin-top: 22px;
+            height: 32px;
+            /* border: 2px solid red; */
+            background-color: #07242f;
+            border-radius: 6px;
+            font-size: 17px;
+            color: white;
+            margin-left: 120px;
+            padding-top: 4px;
+        }
+
+        .btn3:hover {
+            color: #00ffffad;
+            transform: scale(1.01);
+            transition: all 0.9s ease-in-out;
+        }
+
+        .phone {
+            color: #00ffffad;
+            font-size: 19px;
+            letter-spacing: 00.02cm;
+            margin-top: 31px;
+        }
+        .feed:hover 
+        {
+            transform: scale(1.05);
+            transition: all 0.1s ease-in-out;
+        }
+        .message:hover 
+        {
+            transform: scale(1.05);
+            transition: all 0.1s ease-in-out;
+    
+        }
+        .item:hover 
+        {
+            transform: scale(1.2);
+            transition: all 0.01s ease-in;
+        
+        }
+        
+        
+    </style>
+</head>
+
+<body>
+    <section id="home">
+        <header>
+            <nav class="navbar">
+                <ul>
+                    <li class="item"><a  href="#home">Home</a></li>
+                    <li class="item"><a  href="#myresume">Resume</a></li>
+                    <li class="item"><a  href="#home">Projects</a></li>
+                    <li class="item"><a  href="#about-me">About</a></li>
+                    <li class="item"><a  href="#contact-us">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="mid">
+            <div class="first">Hello, I'm </div>
+            <div class="second">Suraj Kumar</div>
+            <div class="third">AND THIS IS MY PORTFOLIO</div>
+        </div>
+    </section>
+
+    <div class="resume">
+        <section id="myresume">
+            <p class="desc">My <strong>RESUME</strong></p>
+            <div class="row">
+                <div class="column">
+                    <div id="edu">EDUCATION</div>
+                    <div class="box">
+                        <div id="date">October 2020 -Present</div>
+                        <div id="name">Dayananda Sagar College Of Engineering , Bangalore</div>
+                        <div id="score">Bachelor Of Engineering, ECE
+                            <br>
+                            Aggregate score: 9.22 till 2nd Semester
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div id="date">March 2017 - April 2019</div>
+                        <div id="name">Inter Science College , Koderma</div>
+                        <div id="score">Secondary Education : Physics Chemistry Mathematics
+                            <br>
+                            Score : 79 %
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div id="date">March 2005 - March 2017</div>
+                        <div id="name">Saint Clare's School , Koderma</div>
+                        <div id="score">Primary Education
+                            <br>
+                            Score : 93.3 %
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div id="skills">SKILLS</div>
+                    <div class="lang">
+                        <div class="box2">
+                            <p>Languages</p>
+                            <ul>
+                                <li>C</li>
+                                <li>C++</li>
+                                <li>Javascript</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="lang">
+                        <div class="box2">
+                            <p>Technical Skills</p>
+                            <ul>
+                                <li>Data Structures</li>
+                                <li>Basic Algorithms</li>
+                                <li>Problem Solving</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="lang">
+                        <div class="box2">
+                            <p>Web Technologies</p>
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>Node JS</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="about-me">
+            <p class="desc"><strong>About</strong></p>
+            <div class="row">
+                <div class="column">
+                    <img class="pic" src="images/IMG_20210227_210852_403.jpg" alt="">
+                </div>
+                <div class="column">
+                    <p>
+                        <Strong>Hi , I am Suraj. I am a student Of Dayananda Sagar College Of Engineering and my branch
+                            is
+                            Electronics and Communication Engineering .</Strong>
+                        <br>
+                        Currently , I am learning Web Developement to make some
+                        cool and exciting projects , I am involved in Competitive Coding as well with over 400+ Problems
+                        Solved. I am always energetic and eager to learn new skills with creative approach.
+                    </p>
+                    <button class="btn2"><a
+                            href="https://drive.google.com/file/d/1gt5vKHJkU1_K12prpllnJ5xoXEb_EThf/view">Download
+                            CV</a></button>
+                </div>
+            </div>
+        </section>
+        <section id="contact-us">
+            <p class="desc"><strong>Contact</strong></p>
+            <div class="row">
+                <div class="column">
+                    <div class="forms">Get In <strong>Touch</strong></div>
+                    <input class="feed" type="text" placeholder="Your Name">
+                    <input class="feed" type="email" name="" id="" placeholder="Your Email">
+                    <input class="feed" type="number" name="" id="" placeholder="Your Number">
+                    <input class="message" type="text" name="" id="" placeholder="Write a Message">
+                    <button class="btn3">Send Message</button>
+                </div>
+                <div class="column">
+                    <div class="forms"><strong>Details</strong></div>
+                    <div class="contact">
+                        <div class="phone">Phone Number :<br>+91 9113119212</div>
+                        <div class="phone">Email Address :<br>surajkumar1029ss@gmail.com</div>
+                        <div class="phone"> Address :<br>Bengaluru , Karnataka </div>
+                    </div>
+                    <div class="contact">    
+                        <div class="logos">
+                            <a href="https://github.com/jarus1029"><img class="logos" src="images/logo-2582757_1920.png"
+                                    alt=""></a>
+                            <a href="https://www.linkedin.com/in/suraj-kumar-65220a209/"><img class="logos" id="linked"
+                                    src="images/linkedin-2935407_1280.png" alt=""></a>
+
+
+                            <a href="https://twitter.com/home"><img class="logos" id="tweet"
+                                    src="images/twitter-2935414_1280.png" alt=""></a>
+                        </div>
+                        <!-- <a href="" class="email">surajkumar1029ss@gmail.com</a>-->
+                    </div>
+                    <br>
+                    <button class="btn"><a href="mailto:surajkumar1029ss@gmail.com">Mail me</a></button>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="center">
+                Copyright &copy; 2022 All rights reserved.
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
